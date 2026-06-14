@@ -1,0 +1,1 @@
+Projeto desenvolvido como auxiliar de programação para Trabalho de Conclusão de Curso (TCC) do Instituto Federal do Paraná, com foco em apoio ao desenvolvimento, organização e implementação de funcionalidades relacionadas ao sistema proposto.
