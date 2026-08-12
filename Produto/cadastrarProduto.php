@@ -15,8 +15,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $preco = $_POST["preco"];
     $status = $_POST["status"];
 
-    $sql = "INSERT INTO produto (nome, descricao, preco, status) 
-            VALUES ('$nome', '$descricao', '$preco', '$status')";
+    $sql = "INSERT INTO produto (nome,email, descricao, preco, status) 
+            VALUES ('$nome','$email', '$descricao', '$preco', '$status')";
 
     if (mysqli_query($conexao, $sql)) {
     $mensagem = "Produto cadastrado com sucesso!";
@@ -46,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="card">
         <div class="card-body">
 
-            <h1 class="mb-4">Cadastro de Clientes</h1>
+            <h1 class="mb-4">Cadastro de Produtos</h1>
 
             <form action="" method="post">
 
