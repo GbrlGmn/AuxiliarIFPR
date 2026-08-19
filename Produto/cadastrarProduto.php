@@ -1,4 +1,4 @@
-// Produto/cadastrarProduto.php
+
 <?php
 $mensagem = "";
 

@@ -1,4 +1,4 @@
-// Categoria/editarCategoria.php
+
 <?php
 $conexao = new mysqli("localhost", "root", "", "ifpr02");
 

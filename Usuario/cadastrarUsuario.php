@@ -1,7 +1,7 @@
 <?php
 $mensagem = "";
 
-$conexao = mysqli_connect("localhost", "root", "", "ifpr");
+$conexao = mysqli_connect("localhost", "root", "", "ifpr02");
 
 if (!$conexao) {
     die("Falha na conexão: " . mysqli_connect_error());

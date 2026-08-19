@@ -1,4 +1,4 @@
-// Categoria/cadastrarCategoria.php
+
 <?php
 $mensagem = "";
 

@@ -1,8 +1,38 @@
 <?php
-// Conexão com o banco de dados
-$conexao = new mysqli("localhost", "root", "", "ifpr");
+$conexao = new mysqli("localhost", "root", "", "ifpr02");
+
 if ($conexao->connect_error) {
-        die("Falha na conexão: " . $conexao->connect_error);
+    die("Falha na conexão: " . $conexao->connect_error);
+}
+
+$id = $_GET['id'] ?? '';
+$nome = '';
+$email = '';
+
+if ($id) {
+    $sql = "SELECT * FROM usuario WHERE id = $id";
+    $resultado = $conexao->query($sql);
+    
+    if ($resultado->num_rows > 0) {
+        $linha = $resultado->fetch_assoc();
+        $nome = $linha['nome'];
+        $email = $linha['email'];
+       
+    }
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $id = $_POST['id'];
+    $nome = $_POST['nome'];
+    $email = $_POST['email'];
+ 
+    $sql = "UPDATE usuario SET nome = '$nome', email = '$email' ";
+    
+    if ($conexao->query($sql)) {
+        header("Location: listarUsuario.php");
+    } else {
+        $mensagem = "Erro: " . $conexao->error;
+    }
 }
 ?>
 

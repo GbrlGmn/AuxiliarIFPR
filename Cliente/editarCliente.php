@@ -1,6 +1,6 @@
-// Cliente/editarCliente.php
+
 <?php
-$conexao = new mysqli("localhost", "root", "", "ifpr");
+$conexao = new mysqli("localhost", "root", "", "ifpr02");
 
 if ($conexao->connect_error) {
     die("Falha na conexão: " . $conexao->connect_error);

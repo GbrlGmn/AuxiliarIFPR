@@ -1,6 +1,6 @@
 <?php
 // Conexão com o banco de dados
-$conexao = new mysqli("localhost", "root", "", "ifpr");
+$conexao = new mysqli("localhost", "root", "", "ifpr02");
 // prepara o SQL
 $sql = "SELECT * FROM usuario";
 // executa o SQL
